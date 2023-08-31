@@ -59,19 +59,52 @@
       <!-- nav section -->
 
       <nav class="flex justify-between items-center border-b-2 pb-6 lg:pb-8">
-        <img class="h-5 md:h-8 lg:h-auto" src="./Logo.png" alt="Logo" />
+        <img class="w-24 md:w-44" src="./Logo.png" alt="Logo" />
         <button
-          class="btn normal-case md:text-lg font-medium font-color-1 btn-color-2 rounded-md px-3 md:px-5 py-1 md:py-2"
+          class="btn normal-case md:text-lg font-medium font-color-1 hover:text-white btn-color-2 hover:bg-[#ff1f3d] rounded-md"
         >
           Sort by view
         </button>
-        <button
-          class="btn normal-case md:text-lg font-medium text-white btn-color-1 hover:bg-[#ff1f3dbc] rounded-md px-3 md:px-5 py-1 md:py-2"
-        >
-          Blog
-        </button>
+        <div class="flex justify-end w-24 md:w-44">
+          <button
+            class="btn normal-case md:text-lg font-medium text-white btn-color-1 hover:bg-[#ff1f3dbc] rounded-md"
+          >
+            Blog
+          </button>
+        </div>
       </nav>
     </header>
+
+    <!-- main section -->
+
+    <main>
+      <!-- tab section -->
+
+      <div
+        class="flex justify-center gap-3 md:gap-6 lg:gap-10 pt-6 md:pt-8 pb-8 md:pb-10"
+      >
+        <button
+          class="btn normal-case md:text-lg font-medium font-color-1 hover:text-white btn-color-2 hover:bg-[#ff1f3d] rounded-md"
+        >
+          All
+        </button>
+        <button
+          class="btn normal-case md:text-lg font-medium font-color-1 hover:text-white btn-color-2 hover:bg-[#ff1f3d] rounded-md"
+        >
+          Music
+        </button>
+        <button
+          class="btn normal-case md:text-lg font-medium font-color-1 hover:text-white btn-color-2 hover:bg-[#ff1f3d] rounded-md"
+        >
+          Comedy
+        </button>
+        <button
+          class="btn normal-case md:text-lg font-medium font-color-1 hover:text-white btn-color-2 hover:bg-[#ff1f3d] rounded-md"
+        >
+          Drawing
+        </button>
+      </div>
+    </main>
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </body>
