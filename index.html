@@ -13,11 +13,65 @@
       type="text/css"
     />
 
-    <!--  -->
+    <!-- Inter Font -->
 
-    <style></style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      .font-color-1 {
+        color: #252525;
+      }
+
+      .font-color-2 {
+        color: #25252570;
+      }
+
+      .font-color-3 {
+        color: #171717;
+      }
+
+      .font-color-4 {
+        color: #171717b3;
+      }
+
+      .btn-color-1 {
+        background-color: #ff1f3d;
+      }
+
+      .btn-color-2 {
+        background-color: #25252533;
+      }
+    </style>
   </head>
-  <body>
+  <body class="mx-10 lg:mx-16 mt-6 lg:mt-8">
+    <!-- header section -->
+
+    <header>
+      <!-- nav section -->
+
+      <nav class="flex justify-between items-center border-b-2 pb-6 lg:pb-8">
+        <img class="h-5 md:h-8 lg:h-auto" src="./Logo.png" alt="Logo" />
+        <button
+          class="btn normal-case md:text-lg font-medium font-color-1 btn-color-2 rounded-md px-3 md:px-5 py-1 md:py-2"
+        >
+          Sort by view
+        </button>
+        <button
+          class="btn normal-case md:text-lg font-medium text-white btn-color-1 hover:bg-[#ff1f3dbc] rounded-md px-3 md:px-5 py-1 md:py-2"
+        >
+          Blog
+        </button>
+      </nav>
+    </header>
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
   </body>
