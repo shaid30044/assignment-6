@@ -7,7 +7,11 @@
 
     <!-- Title Logo -->
 
-    <link rel="shortcut icon" href="title-logo.png" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./image/title-logo.png"
+      type="image/x-icon"
+    />
 
     <!-- Daisy UI -->
 
@@ -39,6 +43,10 @@
         color: #171717b3;
       }
 
+      .font-color-3 {
+        color: #ff1f3d;
+      }
+
       .btn-color-1 {
         background-color: #ff1f3d;
       }
@@ -66,48 +74,136 @@
 
     <!-- main section -->
 
-    <main class="flex flex-col justify-center items-center pt-10">
-      <ul class="list-disc flex flex-col justify-between gap-10">
-        <div class="border-2 rounded-xl w-full pl-8 pr-5 py-4">
-          <li>
-            <h3 class="text-xl font-medium font-color-1">
-              Discuss the scope of var, let and const.
-            </h3>
-          </li>
-          <p class="font-medium font-color-2 pt-2">
-            var: Variables declared with "var" can be redeclared and reassigned,
-            as well as accessed from wherever it is declared.
-            <br />
-            <br />
-            let: Variables declared with "let" can be reassigned and redeclared
-            only within the block scope in which they are declared.
-            <br />
-            <br />
-            const: Variables declared with "const" can only be redeclared within
-            the block scope in which they are declared but not reassigned.
-          </p>
-        </div>
-        <div class="border-2 rounded-xl w-full pl-8 pr-4 py-4">
-          <li>
-            <h3 class="text-xl font-medium font-color-1">
-              Tell us the use cases of null and undefined.
-            </h3>
-          </li>
-          <p class="font-medium font-color-2 pt-2">
-            Discuss the scope of var, let and const
-          </p>
-        </div>
-        <div class="border-2 rounded-xl w-full pl-8 pr-4 py-4">
-          <li>
-            <h3 class="text-xl font-medium font-color-1">
-              What do you mean by REST API?
-            </h3>
-          </li>
-          <p class="font-medium font-color-2 pt-2">
-            Discuss the scope of var, let and const
-          </p>
-        </div>
-      </ul>
+    <main
+      class="flex flex-col justify-center gap-14 lg:gap-20 lg:mx-80 py-8 lg:py-10"
+    >
+      <!-- blog 1 -->
+
+      <div>
+        <img
+          class="rounded-t-2xl w-full"
+          src="./image/javascript-var-let-const.webp"
+          alt=""
+        />
+        <h1
+          class="text-2xl md:text-3xl lg:text-4xl font-bold font-color-1 pt-6 pb-4"
+        >
+          Discuss the scope of var, let and const.
+        </h1>
+        <hr />
+        <hr />
+        <p class="lg:text-lg font-medium font-color-2 pt-4">
+          <span class="font-semibold font-color-1">var:</span> Variables
+          declared with <span class="font-semibold font-color-3">var</span> can
+          be redeclared and reassigned, as well as accessed from wherever it is
+          declared.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">let:</span> Variables
+          declared with <span class="font-semibold font-color-3">let</span> can
+          be reassigned and redeclared only within the block scope in which they
+          are declared.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">const:</span> Variables
+          declared with
+          <span class="font-semibold font-color-3">const</span> can only be
+          redeclared within the block scope in which they are declared but not
+          reassigned.
+        </p>
+      </div>
+
+      <!-- blog 2 -->
+
+      <div>
+        <img
+          class="rounded-t-2xl w-full"
+          src="./image/null-and-undefined-in-javascript.jpg"
+          alt=""
+        />
+        <h1
+          class="text-2xl md:text-3xl lg:text-4xl font-bold font-color-1 pt-6 pb-4"
+        >
+          Tell us the use cases of null and undefined.
+        </h1>
+        <hr />
+        <hr />
+        <p class="text-xl font-semibold font-color-3 underline pt-5">
+          undefined:
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-4">
+          <span class="font-semibold font-color-1">Default Value:</span> If
+          something is declared in a variable without being assigned.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">Function Parameters:</span>
+          When a function is called without providing a value to the function's
+          parameter.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1"
+            >Missing Object Properties:</span
+          >
+          Attempting to access a non-existent property on an object.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">Return Value:</span> If a
+          function does not return a value specified.
+        </p>
+        <p class="text-xl font-semibold font-color-3 underline pt-5">null:</p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1"
+            >Assigning to Indicate No Value:</span
+          >
+          Assigning 'null' to a variable or property value is specified to be
+          empty.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1"
+            >Clearing Object Properties:</span
+          >
+          Assigning 'null' to an object's property value specifically means
+          clear.
+        </p>
+      </div>
+
+      <!-- blog 3 -->
+
+      <div>
+        <img class="rounded-t-2xl w-full" src="./image/rest-api.png" alt="" />
+        <h1
+          class="text-2xl md:text-3xl lg:text-4xl font-bold font-color-1 pt-6 pb-4"
+        >
+          What do you mean by REST API?
+        </h1>
+        <hr />
+        <hr />
+        <p class="lg:text-lg font-medium font-color-2 pt-4">
+          <span class="font-semibold font-color-3">REST API</span> is basically
+          <span class="font-semibold font-color-1"
+            >Representational State Transfer Application Programming
+            Interface</span
+          >. It is a style of designing network based applications. It helps in
+          fast communication between web server and client. It uses standard
+          HTTP methods. Some common methods are:
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">Get:</span> Used to receive
+          any data from the server.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">Post:</span> Used to provide
+          any data to the server.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">Put:</span> Used to update
+          any data on the server.
+        </p>
+        <p class="lg:text-lg font-medium font-color-2 pt-3">
+          <span class="font-semibold font-color-1">Delete:</span>
+          Used to delete any data from the server.
+        </p>
+      </div>
     </main>
     <script src="https://cdn.tailwindcss.com"></script>
   </body>
