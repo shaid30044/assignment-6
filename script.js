@@ -4,14 +4,6 @@ const handleData = async () => {
   );
   const data = await res.json();
 
-  // const noContent = document.getElementById("no-content");
-
-  // if (data.data.length === "0") {
-  //   noContent.removeAttribute("hidden");
-  // } else {
-  //   noContent.setAttribute("hidden", "");
-  // }
-
   const tabContainer = document.getElementById("tab-container");
 
   data.data.forEach((tab) => {
@@ -20,7 +12,7 @@ const handleData = async () => {
     div.innerHTML = `
     <button
     onclick="handleCard('${tab.category_id}')"
-        class="btn normal-case md:text-lg font-medium font-color-1 hover:text-white btn-color-2 hover:bg-[#ff1f3d] rounded-md"
+        class="btn normal-case md:text-lg font-medium font-color-1 hover:text-white focus:text-white btn-color-2 hover:bg-[#ff1f3d] focus:bg-[#ff1f3d] rounded-md"
     >
         ${tab.category}
     </button>
@@ -38,6 +30,40 @@ const handleCard = async (categoryId) => {
   );
   const data = await res.json();
 
+  const noContent = document.getElementById("no-content");
+  const dataLength = data.data.length;
+
+  if (dataLength == "0") {
+    noContent.removeAttribute("hidden");
+  } else {
+    noContent.setAttribute("hidden", "");
+  }
+
+  // if (dataLength === false) {
+  //   noContent.removeAttribute("hidden");
+  // } else {
+  //   noContent.setAttribute("hidden", "");
+  // }
+
+  // const sortByView = document
+  //   .getElementById("sort-by-view")
+  //   .addEventListener("click", () => {
+  //     data.data.forEach((view) => {
+  //       const viewString = view.others.views;
+  //       const viewFloat = parseFloat(viewString);
+  //       const sortView = viewFloat * 1000;
+  //       const viewArray = [sortView];
+  //       const newArray = [];
+
+  //       viewArray.forEach(() => {
+  //         const sortByViewBtn = Math.max(...viewArray);
+  //         newArray.push(sortByViewBtn);
+
+  //         console.log(sortByViewBtn, newArray);
+  //       });
+  //     });
+  //   });
+
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerText = "";
 
@@ -53,14 +79,12 @@ const handleCard = async (categoryId) => {
     <div>
         <div class="relative">
             <img class="rounded-lg w-full h-44" src=${card?.thumbnail} alt="" />
-            <p id="time"
-              class="absolute bottom-3 right-3 text-[10px] text-white rounded-md bg-[#171717] px-2 py-1"
+            <p
+              class="absolute bottom-3 right-3 text-[10px] text-white rounded-md px-2 py-1 ${
+                card.others.posted_date ? "" : "hidden"
+              } ${card.others.posted_date ? "bg-[#171717]" : "bg-transparent"}"
             >
-            ${
-              card.others.posted_date
-                ? `${hrs}hrs ${min}min ago`
-                : document.getElementById("time").setAttribute("hidden", true)
-            }
+            ${card.others.posted_date ? `${hrs}hrs ${min}min ago` : ""}
             </p>
          </div>
          <div class="flex justify-start items-start gap-3 pt-4 md:pt-5">
@@ -85,8 +109,6 @@ const handleCard = async (categoryId) => {
 
     cardContainer.appendChild(div);
   });
-
-  console.log(data.data);
 };
 
 handleData();
