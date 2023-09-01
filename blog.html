@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube Blog</title>
+
+    <!-- Title Logo -->
+
+    <link rel="shortcut icon" href="title-logo.png" type="image/x-icon" />
+
+    <!-- Daisy UI -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Inter Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      .font-inter {
+        font-family: "Inter", sans-serif;
+      }
+
+      .font-color-1 {
+        color: #252525;
+      }
+
+      .font-color-2 {
+        color: #171717b3;
+      }
+
+      .btn-color-1 {
+        background-color: #ff1f3d;
+      }
+    </style>
+  </head>
+  <body class="font-inter mx-10 lg:mx-16 mt-6 lg:mt-8 mb-10">
+    <!-- header section -->
+
+    <header>
+      <!-- nav section -->
+
+      <nav class="flex justify-between items-center border-b-2 pb-6 lg:pb-8">
+        <a href="index.html">
+          <img class="w-24 md:w-44" src="./image/Logo.png" alt="Logo" />
+        </a>
+        <a href="./index.html"
+          ><button
+            class="btn normal-case md:text-lg font-medium text-white btn-color-1 hover:bg-[#ff1f3dbc] rounded-md"
+          >
+            Home
+          </button></a
+        >
+      </nav>
+    </header>
+
+    <!-- main section -->
+
+    <main class="flex flex-col justify-center items-center pt-10">
+      <ul class="list-disc flex flex-col justify-between gap-10">
+        <div class="border-2 rounded-xl w-full pl-8 pr-5 py-4">
+          <li>
+            <h3 class="text-xl font-medium font-color-1">
+              Discuss the scope of var, let and const.
+            </h3>
+          </li>
+          <p class="font-medium font-color-2 pt-2">
+            var: Variables declared with "var" can be redeclared and reassigned,
+            as well as accessed from wherever it is declared.
+            <br />
+            <br />
+            let: Variables declared with "let" can be reassigned and redeclared
+            only within the block scope in which they are declared.
+            <br />
+            <br />
+            const: Variables declared with "const" can only be redeclared within
+            the block scope in which they are declared but not reassigned.
+          </p>
+        </div>
+        <div class="border-2 rounded-xl w-full pl-8 pr-4 py-4">
+          <li>
+            <h3 class="text-xl font-medium font-color-1">
+              Tell us the use cases of null and undefined.
+            </h3>
+          </li>
+          <p class="font-medium font-color-2 pt-2">
+            Discuss the scope of var, let and const
+          </p>
+        </div>
+        <div class="border-2 rounded-xl w-full pl-8 pr-4 py-4">
+          <li>
+            <h3 class="text-xl font-medium font-color-1">
+              What do you mean by REST API?
+            </h3>
+          </li>
+          <p class="font-medium font-color-2 pt-2">
+            Discuss the scope of var, let and const
+          </p>
+        </div>
+      </ul>
+    </main>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>
